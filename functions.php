@@ -8,9 +8,9 @@ function my_theme_enqueue_styles()
         array( $parentStyle ),
         wp_get_theme()->get('Version')
     );
-    wp_enqueue_style('custom-css',
+    wp_enqueue_style('ChildCustomizations',
       get_stylesheet_directory_uri().'/resources/css/custom.css',
-      array('theme-css')
+      array('custom-css','bootstrap-css','theme-css')
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
