@@ -75,7 +75,7 @@ class MySettingsPage
     				.on('select', function() {
     					var attachment = custom_uploader.state().get('selection').first().toJSON();
     					$(image).attr('src', attachment.url);
-    					$(input).val(attachment.url);
+    					$(input).val(attachment.id);
 
     				})
     				.open();
@@ -104,7 +104,7 @@ class MySettingsPage
             );  
 
     	add_settings_field(
-            'imagen_top', // ID
+            'imagen_top_id', // ID
             'Imagen Top', // Title 
             array( $this, 'imagen_top_callback' ), // Callback
             'child_theme_option', // Page
@@ -140,8 +140,8 @@ class MySettingsPage
 
         // if( isset( $input['title'] ) )
         //     $new_input['title'] = sanitize_text_field( $input['title'] );
-    	if( isset( $input['imagen_top'] ) )
-    		$new_input['imagen_top'] =  $input['imagen_top'];
+    	if( isset( $input['imagen_top_id'] ) )
+    		$new_input['imagen_top_id'] =  absint($input['imagen_top_id']);
 
     	return $new_input;
     }
@@ -158,12 +158,14 @@ class MySettingsPage
      * Get the settings option array and print one of its values
      */
     public function imagen_top_callback(){
-    	$imagenTop=isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '';
-    	echo '<p><strong>Header Logo Image URL:</strong><br />';
-    	printf('<img class="imagen_top" src="%s" height="100" />',$imagenTop);
-    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" value="%s">', $imagenTop);
+    	$imagenTopId=isset( $this->options['imagen_top_id'] ) ? esc_attr( $this->options['imagen_top_id']) : '';
+    	$imagen=get_the_post_thumbnail( $imagenTopId );
+    	// echo '<p><strong>Header Logo Image URL:</strong><br />';
+    	echo $imagen;
+    	// printf('<img class="imagen_top" src="%s" height="100" />',$imagenTop);
+    	printf('<input class="imagen_top_url" type="hidden" name="child_theme[imagen_top]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
-    	echo '</p>';
+    	// echo '</p>';
 
     }
     // public function id_number_callback()
