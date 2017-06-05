@@ -159,7 +159,7 @@ class MySettingsPage
      */
     public function imagen_top_callback(){
     	$imagenTopId=isset( $this->options['imagen_top_id'] ) ? esc_attr( $this->options['imagen_top_id']) : '';
-    	$imagen=get_the_post_thumbnail( $imagenTopId ,null,array("class"=>"imagen_top"));
+    	$imagen=wp_get_attachment_image( $imagenTopId ,null,true,array("class"=>"imagen_top"));
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	echo $imagen;
     	if($imagen='')
