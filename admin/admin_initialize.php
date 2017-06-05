@@ -163,8 +163,7 @@ class MySettingsPage
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	echo $imagen;
     	if($imagen='')
-    		printf('<img class="imagen_top" src="" />',$imagen);
-
+    		echo '<img class="imagen_top" src="" />';
     	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
