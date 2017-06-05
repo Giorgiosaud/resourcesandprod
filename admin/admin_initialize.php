@@ -162,7 +162,7 @@ class MySettingsPage
     	$imagen=get_the_post_thumbnail_url( $imagenTopId );
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	printf('<img class="imagen_top" src="%s" />',$imagen);
-    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" value="%s">', $imagenTopId);
+    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
 
