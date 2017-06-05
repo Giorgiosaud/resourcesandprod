@@ -60,7 +60,7 @@ class MySettingsPage
     	</div>
     	<script>
     		jQuery(document).ready(function($) {
-    			$('.imagen_top_upload').click(function(e) {
+    			$('.imagen_upload').click(function(e) {
     				e.preventDefault();
     				var	este=$(this),
     				input=este.data('input-selector'),
@@ -172,7 +172,7 @@ class MySettingsPage
     	if($imagen='')
     		echo '<img class="imagen_top" src="" />';
     	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
-    	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
+    	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
 
     }
@@ -185,7 +185,7 @@ class MySettingsPage
     	if($imagen='')
     		echo '<img class="imagen_on_scroll" src="" />';
     	printf('<input class="imagen_on_scroll_url" type="text" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenTopId);
-    	echo '<a href="#" class="imagen_on_scroll_upload" data-input-selector=".imagen_on_scroll_url" data-image-selector=".imagen_on_scroll">Upload</a>';
+    	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_on_scroll_url" data-image-selector=".imagen_on_scroll">Upload</a>';
     	// echo '</p>';
 
     }
