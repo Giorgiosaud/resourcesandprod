@@ -117,7 +117,7 @@ class MySettingsPage
         // if( isset( $input['title'] ) )
         //     $new_input['title'] = sanitize_text_field( $input['title'] );
     	if( isset( $input['imagen_top'] ) )
-    		$new_input['imagen_top'] = sanitize_text_field( $input['imagen_top'] );
+    		$new_input['imagen_top'] = ( $input['imagen_top'] );
 
     	return $new_input;
     }
@@ -163,7 +163,7 @@ class MySettingsPage
     		});
     	</script>
     	<?php
-    	
+
     }
     // public function id_number_callback()
     // {
