@@ -158,9 +158,10 @@ class MySettingsPage
      * Get the settings option array and print one of its values
      */
     public function imagen_top_callback(){
+    	$imagenTop=isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '';
     	echo '<p><strong>Header Logo Image URL:</strong><br />';
-    	printf('<img class="imagen_top" src="%s" height="100" />',isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '')
-    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" value="%s">', isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '');
+    	printf('<img class="imagen_top" src="%s" height="100" />',$imagenTop);
+    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" value="%s">', $imagenTop);
     	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	echo '</p>';
 
