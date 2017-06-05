@@ -58,6 +58,30 @@ class MySettingsPage
     			?>
     		</form>
     	</div>
+    	<script>
+    		jQuery(document).ready(function($) {
+    			$('.imagen_top_upload').click(function(e) {
+    				e.preventDefault();
+    				var	este=$(this),
+    				input=$este.data('input-selector'),
+    				image=$este.data('image-selector');
+    				var custom_uploader = wp.media({
+    					title: 'Custom Image',
+    					button: {
+    						text: 'Upload Image'
+    					},
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+    				.on('select', function() {
+    					var attachment = custom_uploader.state().get('selection').first().toJSON();
+    					$(image).attr('src', attachment.url);
+    					$(input).val(attachment.url);
+
+    				})
+    				.open();
+    			});
+    		});
+    	</script>
     	<?php
     }
 
@@ -134,37 +158,11 @@ class MySettingsPage
      * Get the settings option array and print one of its values
      */
     public function imagen_top_callback(){
-    	?>
-    	<p><strong>Header Logo Image URL:</strong><br />
-    		<img class="imagen_top" src="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>" height="100" width="100"/>
-    		<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" size="60" value="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>">
-    		<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url">Upload</a>
-    	</p>
-    	<script>
-    		jQuery(document).ready(function($) {
-    			$('.imagen_top_upload').click(function(e) {
-    				e.preventDefault();
-    				$este=$(this);
-    				$input=$este.data('input-selector')
-    				console.log($input);
-    				var custom_uploader = wp.media({
-    					title: 'Custom Image',
-    					button: {
-    						text: 'Upload Image'
-    					},
-                multiple: false  // Set this to true to allow multiple files to be selected
-            })
-    				.on('select', function() {
-    					var attachment = custom_uploader.state().get('selection').first().toJSON();
-    					$('.imagen_top').attr('src', attachment.url);
-    					$('.imagen_top_url').val(attachment.url);
-
-    				})
-    				.open();
-    			});
-    		});
-    	</script>
-    	<?php
+    	echo '<p><strong>Header Logo Image URL:</strong><br />';
+    	printf('<img class="imagen_top" src="%s" height="100" />',isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '')
+    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" value="%s">', isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '');
+    	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
+    	echo '</p>';
 
     }
     // public function id_number_callback()
