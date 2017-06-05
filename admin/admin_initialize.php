@@ -136,8 +136,8 @@ class MySettingsPage
     public function imagen_top_callback(){
     	?>
     	<p><strong>Header Logo Image URL:</strong><br />
-    		<img class="imagen_top" src="<?php echo get_option('imagen_top'); ?>" height="100" width="100"/>
-    		<input class="imagen_top_url" type="text" name="imagen_top" size="60" value="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>">
+    		<img class="imagen_top" src="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>" height="100" width="100"/>
+    		<input class="imagen_top_url" type="text" name="child_theme[imagen_top]" size="60" value="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>">
     		<a href="#" class="imagen_top_upload">Upload</a>
     	</p>
     	<script>
