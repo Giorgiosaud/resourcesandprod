@@ -9,8 +9,8 @@ function my_theme_enqueue_styles()
         wp_get_theme()->get('Version')
     );
     wp_enqueue_style('custom-css',
-      get_stylesheet_directory_uri().'/resources/css/custom.css'
-      // array('custom-css')
+      get_stylesheet_directory_uri().'/resources/css/custom.css',
+      array('theme-css')
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
