@@ -112,7 +112,7 @@ class MySettingsPage
             );
     	add_settings_field(
             'imagen_on_scroll_id', // ID
-            'Imagen Top', // Title 
+            'Imagen On Scroll', // Title 
             array( $this, 'imagen_on_scroll_callback' ), // Callback
             'child_theme_option', // Page
             'header_options' // Section           
@@ -173,7 +173,7 @@ class MySettingsPage
     	echo $imagen;
     	if($imagen='')
     		echo '<img class="imagen_top" src="" />';
-    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
+    	printf('<input class="imagen_top_url" type="hidden" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
 
@@ -186,7 +186,7 @@ class MySettingsPage
     	echo $imagen;
     	if($imagen='')
     		echo '<img class="imagen_on_scroll" src="" />';
-    	printf('<input class="imagen_on_scroll_url" type="text" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenTopId);
+    	printf('<input class="imagen_on_scroll_url" type="hidden" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_on_scroll_url" data-image-selector=".imagen_on_scroll">Upload</a>';
     	// echo '</p>';
 
