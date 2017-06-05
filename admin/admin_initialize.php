@@ -63,8 +63,8 @@ class MySettingsPage
     			$('.imagen_top_upload').click(function(e) {
     				e.preventDefault();
     				var	este=$(this),
-    				input=$este.data('input-selector'),
-    				image=$este.data('image-selector');
+    				input=este.data('input-selector'),
+    				image=este.data('image-selector');
     				var custom_uploader = wp.media({
     					title: 'Custom Image',
     					button: {
