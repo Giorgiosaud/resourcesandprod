@@ -159,9 +159,11 @@ class MySettingsPage
      */
     public function imagen_top_callback(){
     	$imagenTopId=isset( $this->options['imagen_top_id'] ) ? esc_attr( $this->options['imagen_top_id']) : '';
-    	$imagen=get_the_post_thumbnail_url( $imagenTopId );
+    	$imagen=get_the_post_thumbnail( $imagenTopId ,null,array("class"=>"imagen_top"));
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
-    	printf('<img class="imagen_top" src="%s" />',$imagen);
+    	if($imagen='')
+    		printf('<img class="imagen_top" src="" />',$imagen);
+
     	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_top_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
