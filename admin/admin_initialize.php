@@ -5,5 +5,5 @@ function child_theme_menu() {
 }
 function child_options()
 {
-	echo require CHILD_ADMIN_DIR.'/Page/child_options_settings.php';
+	require CHILD_ADMIN_DIR.'/Page/child_options_settings.php';
 }
