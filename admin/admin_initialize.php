@@ -117,7 +117,7 @@ class MySettingsPage
         // if( isset( $input['title'] ) )
         //     $new_input['title'] = sanitize_text_field( $input['title'] );
     	if( isset( $input['imagen_top'] ) )
-    		$new_input['imagen_top'] = ( $input['imagen_top'] );
+    		$new_input['imagen_top'] = sanitize_text_field( $input['imagen_top'] );
 
     	return $new_input;
     }
@@ -137,7 +137,7 @@ class MySettingsPage
     	?>
     	<p><strong>Header Logo Image URL:</strong><br />
     		<img class="imagen_top" src="<?php echo get_option('imagen_top'); ?>" height="100" width="100"/>
-    		<input class="imagen_top_url" type="text" name="imagen_top" size="60" value="<?php echo get_option('imagen_top'); ?>">
+    		<input class="imagen_top_url" type="text" name="imagen_top" size="60" value="<?php echo isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : '' ?>">
     		<a href="#" class="imagen_top_upload">Upload</a>
     	</p>
     	<script>
