@@ -44,7 +44,7 @@ class MySettingsPage
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
-                settings_fields( 'my_option_group' );
+                settings_fields( 'child_theme_group' );
                 do_settings_sections( 'my-setting-admin' );
                 submit_button();
             ?>
@@ -59,7 +59,7 @@ class MySettingsPage
     public function page_init()
     {        
         register_setting(
-            'my_option_group', // Option group
+            'child_theme_group', // Option group
             'child_theme', // Option name
             array( $this, 'sanitize' ) // Sanitize
         );
@@ -71,6 +71,13 @@ class MySettingsPage
             'my-setting-admin' // Page
         );  
 
+        add_settings_field(
+            'imagen_top', // ID
+            'Imagen Top', // Title 
+            array( $this, 'imagen_top_callback' ), // Callback
+            'my-setting-admin', // Page
+            'setting_section_id' // Section           
+        );
         add_settings_field(
             'id_number', // ID
             'ID Number', // Title 
@@ -101,6 +108,8 @@ class MySettingsPage
 
         if( isset( $input['title'] ) )
             $new_input['title'] = sanitize_text_field( $input['title'] );
+        if( isset( $input['imagen_top'] ) )
+            $new_input['imagen_top'] = sanitize_text_field( $input['imagen_top'] );
 
         return $new_input;
     }
