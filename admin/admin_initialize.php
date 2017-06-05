@@ -161,6 +161,7 @@ class MySettingsPage
     	$imagenTopId=isset( $this->options['imagen_top_id'] ) ? esc_attr( $this->options['imagen_top_id']) : '';
     	$imagen=get_the_post_thumbnail( $imagenTopId ,null,array("class"=>"imagen_top"));
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
+    	echo $imagen;
     	if($imagen='')
     		printf('<img class="imagen_top" src="" />',$imagen);
 
