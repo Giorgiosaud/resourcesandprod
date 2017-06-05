@@ -11,8 +11,8 @@ class MySettingsPage
      */
     public function __construct()
     {
-        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
-        add_action( 'admin_init', array( $this, 'page_init' ) );
+    	add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+    	add_action( 'admin_init', array( $this, 'page_init' ) );
     }
 
     /**
@@ -21,14 +21,22 @@ class MySettingsPage
     public function add_plugin_page()
     {
         // This page will be under "Settings"
-        add_theme_page('Zonapro Options', 'Zonapro Child Theme Option', 'edit_theme_options', 'child_theme_option',
+    	add_theme_page('Zonapro Options', 'Zonapro Child Theme Option', 'edit_theme_options', 'child_theme_option',
         // add_options_page(
             // 'Settings Admin', 
             // 'My Settings', 
             // 'manage_options', 
             // 'my-setting-admin', 
-            array( $this, 'create_admin_page' )
-        );
+    		array( $this, 'create_admin_page' )
+    		);
+    	if(function_exists( 'wp_enqueue_media' )){
+    		wp_enqueue_media();
+    	}else{
+    		wp_enqueue_style('thickbox');
+    		wp_enqueue_script('media-upload');
+    		wp_enqueue_script('thickbox');
+    	}
+
     }
 
     /**
@@ -37,20 +45,20 @@ class MySettingsPage
     public function create_admin_page()
     {
         // Set class property
-        $this->options = get_option( 'child_theme' );
-        ?>
-        <div class="wrap">
-            <h1>My Settings</h1>
-            <form method="post" action="options.php">
-            <?php
+    	$this->options = get_option( 'child_theme' );
+    	?>
+    	<div class="wrap">
+    		<h1>My Settings</h1>
+    		<form method="post" action="options.php">
+    			<?php
                 // This prints out all hidden setting fields
-                settings_fields( 'child_theme_group' );
-                do_settings_sections( 'child_theme_option' );
-                submit_button();
-            ?>
-            </form>
-        </div>
-        <?php
+    			settings_fields( 'child_theme_group' );
+    			do_settings_sections( 'child_theme_option' );
+    			submit_button();
+    			?>
+    		</form>
+    	</div>
+    	<?php
     }
 
     /**
@@ -58,26 +66,26 @@ class MySettingsPage
      */
     public function page_init()
     {        
-        register_setting(
+    	register_setting(
             'child_theme_group', // Option group
             'child_theme', // Option name
             array( $this, 'sanitize' ) // Sanitize
-        );
+            );
 
-        add_settings_section(
+    	add_settings_section(
             'header_options', // ID
             'My Custom Settings', // Title
             array( $this, 'print_section_info' ), // Callback
             'child_theme_option' // Page
-        );  
+            );  
 
-        add_settings_field(
+    	add_settings_field(
             'imagen_top', // ID
             'Imagen Top', // Title 
             array( $this, 'imagen_top_callback' ), // Callback
             'child_theme_option', // Page
             'header_options' // Section           
-        );
+            );
         // add_settings_field(
         //     'id_number', // ID
         //     'ID Number', // Title 
@@ -102,16 +110,16 @@ class MySettingsPage
      */
     public function sanitize( $input )
     {
-        $new_input = array();
+    	$new_input = array();
         // if( isset( $input['id_number'] ) )
         //     $new_input['id_number'] = absint( $input['id_number'] );
 
         // if( isset( $input['title'] ) )
         //     $new_input['title'] = sanitize_text_field( $input['title'] );
-        if( isset( $input['imagen_top'] ) )
-            $new_input['imagen_top'] = sanitize_text_field( $input['imagen_top'] );
+    	if( isset( $input['imagen_top'] ) )
+    		$new_input['imagen_top'] = sanitize_text_field( $input['imagen_top'] );
 
-        return $new_input;
+    	return $new_input;
     }
 
     /** 
@@ -119,17 +127,43 @@ class MySettingsPage
      */
     public function print_section_info()
     {
-        print 'Enter your settings below:';
+    	print 'Enter your settings below:';
     }
 
     /** 
      * Get the settings option array and print one of its values
      */
     public function imagen_top_callback(){
-    	printf(
-            '<input type="text" id="imagen_top" name="child_theme[imagen_top]" value="%s" />',
-            isset( $this->options['imagen_top'] ) ? esc_attr( $this->options['imagen_top']) : ''
-        );
+    	?>
+    	<p><strong>Header Logo Image URL:</strong><br />
+    		<img class="imagen_top" src="<?php echo get_option('imagen_top'); ?>" height="100" width="100"/>
+    		<input class="imagen_top_url" type="text" name="imagen_top" size="60" value="<?php echo get_option('imagen_top'); ?>">
+    		<a href="#" class="imagen_top_upload">Upload</a>
+    	</p>
+    	<script>
+    		jQuery(document).ready(function($) {
+    			$('.imagen_top_upload').click(function(e) {
+    				e.preventDefault();
+
+    				var custom_uploader = wp.media({
+    					title: 'Custom Image',
+    					button: {
+    						text: 'Upload Image'
+    					},
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+    				.on('select', function() {
+    					var attachment = custom_uploader.state().get('selection').first().toJSON();
+    					$('.imagen_top').attr('src', attachment.url);
+    					$('.imagen_top_url').val(attachment.url);
+
+    				})
+    				.open();
+    			});
+    		});
+    	</script>
+    	<?php
+    	
     }
     // public function id_number_callback()
     // {
@@ -152,4 +186,4 @@ class MySettingsPage
 }
 
 if( is_admin() )
-    $my_settings_page = new MySettingsPage();
+	$my_settings_page = new MySettingsPage();
