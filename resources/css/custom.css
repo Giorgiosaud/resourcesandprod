@@ -21,6 +21,8 @@ a.navbar-brand{
 	}
 	.main-nav .img-responsive.logo-fixed{
 		display: block;
+		height: 100%;
+		width:auto;
 	}
 
 }
