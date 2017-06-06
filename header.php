@@ -99,7 +99,7 @@
                                 <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                                     <h1>
                                     <?php var_dump($topImage);?>
-                                    <?php var_dump($imagen_on_scroll_id);?>
+                                    <?php var_dump($scrollImage);?>
 
                                     
                                         <?= $topImage ?>
