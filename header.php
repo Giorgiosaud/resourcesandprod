@@ -77,8 +77,8 @@
                                 $logo = get_option('logo_url', FALSE);
                                 $logotext = get_option('logo_text', FALSE);
                                 $optionsChild=get_option('child_theme');
-                                $topImage=wp_get_attachment_image($optionsChild['imagen_top_id'],'full',false,array('class'=>'img-responsive img-top'));
-                                $scrollImage=wp_get_attachment_image($optionsChild['imagen_on_scroll_id'],'full',false,array('class'=>'img-responsive img-scroll'));
+                                $topImage=$optionsChild['imagen_top_id'];
+                                $scrollImage=$optionsChild['imagen_on_scroll_id'];
                                 if ($topImage != '') {
                                     $topImage = $logo;
                                 }
@@ -98,6 +98,7 @@
                                 ?>
                                 <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                                     <h1>
+                                    <?php var_dump($optionsChild);?>
                                         <?= $topImage ?>
                                         <?= $scrollImage ?>
                                     <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>">
