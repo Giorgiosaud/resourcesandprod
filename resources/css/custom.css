@@ -25,4 +25,7 @@
 		height: 70px;
 		width: auto;
 	}
+	.img-responsive.logo-fixed{
+	 	display: none;
+	 }
 }
