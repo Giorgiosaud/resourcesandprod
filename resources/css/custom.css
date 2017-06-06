@@ -6,8 +6,21 @@ a.navbar-brand{
   width: 160px;
   height: 170px;
 }
+.main-nav .img-responsive.logo-fixed{
+		display: none;
+	}
+	.main-nav .img-responsive.logo-top{
+		display: block;
+	}
 @media (max-width: 767px){
 	a.navbar-brand{
 		height: 70px;
 	}
+	.main-nav .img-responsive.logo-top{
+		display: none;
+	}
+	.main-nav .img-responsive.logo-fixed{
+		display: block;
+	}
+
 }

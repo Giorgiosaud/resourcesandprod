@@ -101,7 +101,7 @@
                                            
                                         <?= $topImage ?>
                                         <?= $scrollImage ?>
-                                    <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>">
+                                    <!-- <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>"> -->
                                     </h1>
                                     <h2><?php echo $lt; ?></h2>
                                 </a>
