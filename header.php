@@ -77,8 +77,8 @@
                                 $logo = get_option('logo_url', FALSE);
                                 $logotext = get_option('logo_text', FALSE);
                                 $optionsChild=get_option('child_theme');
-                                $topImage=wp_get_attachment_image($optionsChild['imagen_top_id']);
-                                $scrollImage=wp_get_attachment_image($optionsChild['imagen_on_scroll_id']);
+                                $topImage=wp_get_attachment_image($optionsChild['imagen_top_id'],'full',false,array('class'=>'img-responsive logo-top'));
+                                $scrollImage=wp_get_attachment_image($optionsChild['imagen_on_scroll_id'],'full',false,array('class'=>'img-responsive logo-fixed'));
                                 if ($topImage == '') {
                                     $topImage = $logotex;
                                 }
