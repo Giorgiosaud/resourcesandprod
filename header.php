@@ -79,11 +79,11 @@
                                 $optionsChild=get_option('child_theme');
                                 $topImage=$optionsChild['imagen_top_id'];
                                 $scrollImage=$optionsChild['imagen_on_scroll_id'];
-                                if ($topImage != '') {
-                                    $topImage = $logo;
+                                if ($topImage == '') {
+                                    $topImage = $logotex;
                                 }
-                                if ($scrollImage != '') {
-                                    $scrollImage = $logo;
+                                if ($scrollImage == '') {
+                                    $scrollImage = $logotex;
                                 }
                                 if ($logo != '') {
                                     $lo = $logo;
