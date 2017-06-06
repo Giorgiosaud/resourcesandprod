@@ -8,21 +8,18 @@ a.navbar-brand{
 }
 .main-nav .img-responsive.logo-fixed{
 		display: none;
-	}
-	.main-nav .img-responsive.logo-top{
-		display: block;
-	}
+}
+.main-nav .img-responsive.logo-top{
+	display: block;
+}
+.navbar-fixed-top .img-responsive.logo-top{
+	display: none;
+}
+.navbar-fixed-top .img-responsive.logo-fixed{
+	display: block;
+}
 @media (max-width: 767px){
 	a.navbar-brand{
 		height: 70px;
 	}
-	.main-nav .img-responsive.logo-top{
-		display: none;
-	}
-	.main-nav .img-responsive.logo-fixed{
-		display: block;
-		height: 100%;
-		width:auto;
-	}
-
 }
