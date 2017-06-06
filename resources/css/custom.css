@@ -28,7 +28,7 @@
 	.main-nav .img-responsive.logo-top{
 		min-width: 0px;
 	}
-	.img-responsive.logo-fixed{
+	img.img-responsive.logo-fixed{
 	 	display: none;
 	 }
 }
