@@ -98,8 +98,8 @@
                                 ?>
                                 <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                                     <h1>
-                                        <?= $topImage?>
-                                        <?= $scrollImage?>
+                                        <?= $topImage ?>
+                                        <?= $scrollImage ?>
                                     <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>">
                                     </h1>
                                     <h2><?php echo $lt; ?></h2>
