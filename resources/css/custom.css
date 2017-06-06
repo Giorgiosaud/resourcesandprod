@@ -25,7 +25,7 @@
 		height: 70px;
 		width: auto;
 	}
-	.img-responsive.logo-top{
+	.main-nav .img-responsive.logo-top{
 		min-width: 0px;
 	}
 	.img-responsive.logo-fixed{
