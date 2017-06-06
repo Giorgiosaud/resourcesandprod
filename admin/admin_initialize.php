@@ -173,20 +173,20 @@ class MySettingsPage
     	echo $imagen;
     	if($imagen='')
     		echo '<img class="imagen_element imagen_top" src="" />';
-    	printf('<input class="imagen_top_url" type="hidden" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
+    	printf('<input class="imagen_top_url" type="text" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
 
     }
 
     public function imagen_on_scroll_callback(){
-    	$imagenTopId=isset( $this->options['imagen_on_scroll_id'] ) ? esc_attr( $this->options['imagen_on_scroll_id']) : '';
-    	$imagen=wp_get_attachment_image( $imagenTopId ,null,true,array("class"=>"imagen_on_scroll"));
+    	$imagenOnScroll=isset( $this->options['imagen_on_scroll_id'] ) ? esc_attr( $this->options['imagen_on_scroll_id']) : '';
+    	$imagen=wp_get_attachment_image( $imagenOnScroll ,null,true,array("class"=>"imagen_on_scroll"));
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	echo $imagen;
     	if($imagen='')
     		echo '<img class="imagen_element imagen_on_scroll" src="" />';
-    	printf('<input class="imagen_on_scroll_url" type="hidden" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenTopId);
+    	printf('<input class="imagen_on_scroll_url" type="text" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenOnScroll);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_on_scroll_url" data-image-selector=".imagen_on_scroll">Upload</a>';
     	// echo '</p>';
 
