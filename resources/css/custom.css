@@ -9,6 +9,7 @@
 .main-nav .img-responsive.logo-top{
 	display: block;
     width: auto;
+    min-width: 120px;
     max-height: 90%;
 }
 .navbar-fixed-top .img-responsive.logo-top{
