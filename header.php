@@ -98,7 +98,10 @@
                                 ?>
                                 <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                                     <h1>
-                                    <?php var_dump($optionsChild);?>
+                                    <?php var_dump($topImage);?>
+                                    <?php var_dump($imagen_on_scroll_id);?>
+
+                                    
                                         <?= $topImage ?>
                                         <?= $scrollImage ?>
                                     <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>">
