@@ -172,7 +172,7 @@ class MySettingsPage
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	echo $imagen;
     	if($imagen='')
-    		echo '<img class="imagen_top" src="" />';
+    		echo '<img class="imagen_element imagen_top" src="" />';
     	printf('<input class="imagen_top_url" type="hidden" name="child_theme[imagen_top_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_top_url" data-image-selector=".imagen_top">Upload</a>';
     	// echo '</p>';
@@ -185,7 +185,7 @@ class MySettingsPage
     	// echo '<p><strong>Header Logo Image URL:</strong><br />';
     	echo $imagen;
     	if($imagen='')
-    		echo '<img class="imagen_on_scroll" src="" />';
+    		echo '<img class="imagen_element imagen_on_scroll" src="" />';
     	printf('<input class="imagen_on_scroll_url" type="hidden" name="child_theme[imagen_on_scroll_id]" value="%s">', $imagenTopId);
     	echo '<a href="#" class="imagen_upload" data-input-selector=".imagen_on_scroll_url" data-image-selector=".imagen_on_scroll">Upload</a>';
     	// echo '</p>';
