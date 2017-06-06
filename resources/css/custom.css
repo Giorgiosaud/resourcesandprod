@@ -16,6 +16,8 @@
 }
 .navbar-fixed-top .img-responsive.logo-fixed{
 	display: block;
+	height: 100%;
+    width: auto;
 }
 @media (max-width: 767px){
 	a.navbar-brand{
