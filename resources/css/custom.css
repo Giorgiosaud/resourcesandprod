@@ -11,6 +11,8 @@ a.navbar-brand{
 }
 .main-nav .img-responsive.logo-top{
 	display: block;
+    width: auto;
+    max-height: 90%;
 }
 .navbar-fixed-top .img-responsive.logo-top{
 	display: none;
