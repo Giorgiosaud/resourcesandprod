@@ -24,12 +24,12 @@ function my_theme_enqueue_styles()
     wp_enqueue_style('ChildCustomizations');
 
   }
-  funtion team_add_excerpt(){
+  function team_add_excerpt(){
     $args = get_post_type_object("team");
     $args->supports[] = "excerpt";
     register_post_type($args->name, $args);
   }
-  add_action( 'init', 'register_team_post_type' ,20);
+  add_action( 'init', 'team_add_excerpt' ,20);
   add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' ,11);
 
 
