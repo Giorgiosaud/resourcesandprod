@@ -15,7 +15,8 @@ function my_theme_enqueue_styles()
       'font-css','pretty-photo','typography-select')
     );
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+// add_action( 'wp_enqueue_scripts', 'wp_doors_enqueue_scripts',11);
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' ,11);
 define('CHILD_THEME_DIR', get_stylesheet_directory());
 define('CHILD_ADMIN_DIR', CHILD_THEME_DIR . '/admin');
 require_once CHILD_ADMIN_DIR.'/admin_initialize.php';
