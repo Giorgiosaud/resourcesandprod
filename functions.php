@@ -1,4 +1,9 @@
 <?php
+define('CHILD_THEME_DIR', get_stylesheet_directory());
+define('CHILD_ADMIN_DIR', CHILD_THEME_DIR . '/admin');
+
+require_once CHILD_ADMIN_DIR.'/admin_initialize.php';
+
 function my_theme_enqueue_styles()
 {
     $parentStyle = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
@@ -9,7 +14,7 @@ function my_theme_enqueue_styles()
         wp_get_theme()->get('Version')
     );
     wp_enqueue_style('ChildCustomizations',
-      get_stylesheet_directory_uri().'/resources/css/custom.css',
+      CHILD_THEME_DIR.'/resources/css/custom.css',
       array('custom-css','bootstrap-css','theme-css','color-preset',
       'responsive-css','winter-lato','tw-style','font-awesome','animate-css',
       'font-css','pretty-photo','typography-select')
@@ -17,6 +22,5 @@ function my_theme_enqueue_styles()
 }
 // add_action( 'wp_enqueue_scripts', 'wp_doors_enqueue_scripts',11);
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' ,11);
-define('CHILD_THEME_DIR', get_stylesheet_directory());
-define('CHILD_ADMIN_DIR', CHILD_THEME_DIR . '/admin');
-require_once CHILD_ADMIN_DIR.'/admin_initialize.php';
+
+
