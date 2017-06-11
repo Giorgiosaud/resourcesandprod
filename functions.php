@@ -31,5 +31,9 @@ function my_theme_enqueue_styles()
   }
   add_action( 'init', 'team_add_excerpt' ,20);
   add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' ,11);
-
+function wpse59607_remove_meta_box( $callback )
+{
+    remove_meta_box('team_exInfo', __('Icon Info', 'wt'), 'service_icon_info', 'service', 'side', 'high' );
+}
+add_action( 'add_meta_boxes_page', 'wpse59607_remove_meta_box', 999 );
 
