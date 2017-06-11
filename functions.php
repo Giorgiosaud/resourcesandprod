@@ -1,6 +1,7 @@
 <?php
 define('CHILD_THEME_DIR', get_stylesheet_directory());
 define('CHILD_ADMIN_DIR', CHILD_THEME_DIR . '/admin');
+define('CHILD_THEME_URI', get_stylesheet_directory_uri());
 
 require_once CHILD_ADMIN_DIR.'/admin_initialize.php';
 
@@ -15,7 +16,7 @@ function my_theme_enqueue_styles()
     );
     wp_enqueue_style('child-style');
     wp_register_style('ChildCustomizations',
-      CHILD_THEME_DIR.'/resources/css/custom.css',
+      CHILD_THEME_URI.'/resources/css/custom.css',
       array('custom-css','bootstrap-css','theme-css','color-preset',
       'responsive-css','winter-lato','tw-style','font-awesome','animate-css',
       'font-css','pretty-photo','typography-select')
