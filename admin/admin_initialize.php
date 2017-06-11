@@ -29,7 +29,7 @@ class MySettingsPage
             // 'my-setting-admin', 
     		array( $this, 'create_admin_page' )
     		);
-    	if(function_exists( 'wp_enqueue_media' )){
+    	if(function_exists( 'wp_enqueue_media' )&& isset($_GET['page'])&&($_GET['page'] ==='child_theme_option')){
     		wp_enqueue_media();
     	}else{
     		wp_enqueue_style('thickbox');
