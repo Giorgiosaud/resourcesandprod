@@ -8,19 +8,22 @@ function my_theme_enqueue_styles()
 {
     $parentStyle = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
     wp_enqueue_style( $parentStyle, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
+    wp_register_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array( $parentStyle ),
         wp_get_theme()->get('Version')
     );
-    wp_enqueue_style('ChildCustomizations',
+    wp_enqueue_style('child-style');
+    wp_register_style('ChildCustomizations',
       CHILD_THEME_DIR.'/resources/css/custom.css',
       array('custom-css','bootstrap-css','theme-css','color-preset',
       'responsive-css','winter-lato','tw-style','font-awesome','animate-css',
       'font-css','pretty-photo','typography-select')
     );
+    wp_enqueue_style('ChildCustomizations');
+
 }
-// add_action( 'wp_enqueue_scripts', 'wp_doors_enqueue_scripts',11);
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' ,11);
 
 
