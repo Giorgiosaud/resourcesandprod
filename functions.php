@@ -9,7 +9,6 @@ function my_theme_enqueue_styles()
 {
     $parentStyle = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
     wp_enqueue_style( $parentStyle, get_template_directory_uri() . '/style.css' );
-    function doors_enquee_all_style() {
     wp_dequeue_style('font-awesome');
     wp_register_script('font-awesome','https://use.fontawesome.com/db3dbf1fc4.js');
     wp_register_style( 'child-style',
