@@ -6,6 +6,9 @@
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
+.padding-bottom{
+	padding-bottom: 25px;
+}
 .main-nav .img-responsive.logo-fixed{
 		display: none;
 }
