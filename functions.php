@@ -612,6 +612,7 @@ function service_icon_info_child($post)
 'fa-stethoscope' => 'stethoscope',
 'fa-user-md' => 'user-md',
 'fa-wheelchair' => 'wheelchair',
+'fa fa-bath'=>'bathub'
 );
             ?>
             
