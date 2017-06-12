@@ -12,9 +12,13 @@ get_header(); ?>
     <div class="container">
         <div class="row blog-item">
             <div class="col-sm-12 blog-content">
+
                 <?php
                     // Start the Loop.
                     while ( have_posts() ) : the_post();
+                    ?>
+                    <h1><?= get_post_format()?></h1>
+                    <?php
                         get_template_part( 'content', get_post_format() );
                         if(get_option('commentswithc', false) != 'commentOff'):
                         if ( comments_open() || get_comments_number() ) 
