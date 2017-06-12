@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="overlay">
                                         <h4>' . get_the_title() . '</h4>
-                                        <p>' . substr(get_the_content(), 0, 100) . '</p>
+                                        <p>' . get_the_excerpt() . '</p>
                                         <ul class="social-icons">';
                 $f = get_post_meta(get_the_ID(), 'facebook', TRUE);
                 if ($f != '') {
