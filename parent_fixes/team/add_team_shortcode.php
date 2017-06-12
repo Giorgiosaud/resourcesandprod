@@ -35,8 +35,6 @@
             $team_return .= '<div class="our-team padding-bottom wow zoomIn" data-wow-duration="700ms" data-wow-delay="300ms">';
             $team_return .= '<h2 class="text-center heading">' . $title . '</h2>';
             $team_return .= '<div id="'.$id.'" class="carousel slide" data-ride="carousel">';
-            $team_return .= '<a class="team-carousel-left" href="#'.$id.'" data-slide="prev"><i class="fa fa- fa-chevron-left"></i></a>
-                             <a class="team-carousel-right" href="#'.$id.'" data-slide="next"><i class="fa fa- fa-chevron-right"></i></a>';
             $team_return .= '<div class="carousel-inner">';
             $i = 1;
             while (have_posts()) {
