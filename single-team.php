@@ -11,7 +11,7 @@ get_header(); ?>
 <section id="blog-details">
     <div class="container">
         <div class="row blog-item">
-            <div class="col-md-8 col-sm-7 blog-content">
+            <div class="col-sm-12 blog-content">
                 <?php
                     // Start the Loop.
                     while ( have_posts() ) : the_post();
