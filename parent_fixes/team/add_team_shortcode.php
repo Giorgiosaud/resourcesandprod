@@ -44,7 +44,7 @@
                 if (has_post_thumbnail()) {
                     $thumgSmall = get_the_post_thumbnail(get_the_ID(), 'square-big', array('class' => 'img-responsive'));
                 } else {
-                    $thumgSmall = '<img src="http://placehold.it/600x600" alt="' . get_the_title() . '"/>';
+                    $thumgSmall = '<img class="img-responsive" src="http://placehold.it/600x600" alt="' . get_the_title() . '"/>';
                 }
                 if ($i == 1) {
                     $team_return .= '<div class="item active"><div class="row">';
