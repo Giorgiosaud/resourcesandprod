@@ -24,9 +24,7 @@
         ?>
         <h3><?php the_title(); ?></h3>
         <div class="entry-meta">
-            <span><a href="#" class="text-capitalize"><i class="fa fa-user"></i> Posted by <?php echo get_the_author(); ?></a></span>
             <?php the_tags('<span> <i class="fa fa-tag"></i> ', '<i class="fa fa-tag"></i> ', '</span>'); ?>
-            <span><a href="#"><i class="fa fa-comment"></i> <?php echo comments_number('0 Comments', '1 Comment', '% Comment'); ?></a></span>
         </div>
     </div>	
     <div class="entry-post">
