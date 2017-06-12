@@ -37,13 +37,8 @@ get_header();
                         <div class="entry-post">
                             <?php the_content(); ?>
                         </div>
-
-
-                        <div class="wp_page_links">
-                            <?php
-                            wp_link_pages(array('before' => '<div class="page-links"><span class="page-links-title">' . __('Pages:', 'doors') . '</span>','after' => '</div>','link_before' => '<span>','link_after' => '</span>'));?>
-                        </div>
                     </article><!-- #post-## -->
+                <?php endwhile; ?>
                 </div><!-- #content -->
             </div>
         </div>
