@@ -58,7 +58,7 @@
                                     <div class="overlay">
                                         <h4>' . get_the_title() . '</h4>
                                         <p>' . get_the_excerpt() . '</p>
-                                        <p> <a class="btn btn-default" href="<?php the_permalink() ?>">Leer Más</a></p>
+                                        <p> <a class="btn btn-default" href='. get_permalink().'">Leer Más</a></p>
                                         <ul class="social-icons">';
                 $f = get_post_meta(get_the_ID(), 'facebook', TRUE);
                 if ($f != '') {
