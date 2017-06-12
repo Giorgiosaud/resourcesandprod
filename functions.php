@@ -11,6 +11,7 @@ function my_theme_enqueue_styles()
     wp_enqueue_style( $parentStyle, get_template_directory_uri() . '/style.css' );
     wp_dequeue_style('font-awesome');
     wp_register_script('font-awesome','https://use.fontawesome.com/db3dbf1fc4.js');
+    wp_enqueue_script('font-awesome');
     wp_register_style( 'child-style',
       get_stylesheet_directory_uri() . '/style.css',
       array( $parentStyle ),
