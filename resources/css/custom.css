@@ -9,6 +9,11 @@
 .padding-bottom{
 	padding-bottom: 25px;
 }
+.parallax-section{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
 .main-nav .img-responsive.logo-fixed{
 		display: none;
 }
