@@ -48,7 +48,7 @@ function prefix_edit_meta_boxes( $meta_boxes )
   foreach ( $meta_boxes as $k => $meta_box )
   {
     // Remove "Personal Information" meta box
-    if ( isset( $meta_box['id'] ) && 'team_exInfo' == $meta_box['id'] )
+    if ( isset( $meta_box['id'] ) && 'service_icon_info' == $meta_box['id'] )
     {
       unset( $meta_boxes[$k] );
     }
