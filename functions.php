@@ -45,7 +45,7 @@ function tw_service_meta_box_child()
 function service_icon_info_child($post)
 {
 ?>
-    <?php $serviceIcon = get_post_meta($post->ID, 'serviceIcon', TRUE);?>
+    <?php $serviceIcon = get_post_meta($post->ID, 'serviceIcon_child', TRUE);?>
     <div class="meta_tr" style="width: 100%;">
         <div class="meta_lable">Service Icon</div>
         <div class="meta_field">
