@@ -17,7 +17,7 @@ get_header(); ?>
                     // Start the Loop.
                     while ( have_posts() ) : the_post();
                     ?>
-                    <h1><?= get_post_format()?></h1>
+                    <h1>Format: <?= get_post_format()?></h1>
                     <?php
                         get_template_part( 'content', get_post_format() );
                         if(get_option('commentswithc', false) != 'commentOff'):
