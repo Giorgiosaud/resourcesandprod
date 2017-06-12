@@ -54,7 +54,7 @@ function my_theme_enqueue_styles()
       <div class="meta_field">
         <?php
         $icon = array(
-          '' => 'None', 
+          '' => array('name'=>'None'), 
           'fa-500px' => array( 'unicode' => '\f26e', 'name' => '500px' ),
           'fa-address-book' => array( 'unicode' => '\f2b9', 'name' => 'Address book' ),
           'fa-address-book-o' => array( 'unicode' => '\f2ba', 'name' => 'Address book o' ),
@@ -732,7 +732,7 @@ function my_theme_enqueue_styles()
           'fa-youtube-square' => array( 'unicode' => '\f166', 'name' => 'Youtube square' ),
           );
           ?>
-          
+
           <select name="serviceIcon_child" id="serviceIcon_child">
             <?php
             foreach($icon as $key => $val)
@@ -805,8 +805,8 @@ function my_theme_enqueue_styles()
 
         $service_return .= '<div class="container"><div class="row">';
 
-        
-        
+
+
         $q = new WP_Query(
           array('post_type' => array('service'),
             'post_status' => array('publish'),
@@ -827,7 +827,7 @@ function my_theme_enqueue_styles()
           $ico = 'fa fa-bomb';
         }
         $service_return .= '
-        
+
         <div class="col-md-3 col-sm-6 wow zoomIn text-center service-item" data-wow-duration="700ms" data-wow-delay="300ms">          
           <div class="service-icon">
             <i class="' . $ico . '"></i>              
@@ -837,7 +837,7 @@ function my_theme_enqueue_styles()
             <p>' .get_the_content(). '</p>
           </div>          
         </div>
-        
+
         ';
         endwhile;
         $service_return.= '</div>';
