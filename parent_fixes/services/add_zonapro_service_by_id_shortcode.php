@@ -23,7 +23,7 @@
     $posts=($ids=='')?array():explode(', '$ids);
 
 
-
+    var_dump($posts);
     $q = new WP_Query(
       array('post_type' => array('service'),
         'post_status' => array('publish'),
