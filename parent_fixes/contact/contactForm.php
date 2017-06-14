@@ -10,17 +10,17 @@ function contactform_child($atts)
                     <form id="contact-form" class="contact-form" name="contact-form" action="#">
                         <div class="row">
                             <div class="form-group col-sm-6 name-field">
-                                <input type="text" id="conname" name="conname" class="form-control" required="required" placeholder="Name">
+                                <input type="text" id="conname" name="conname" class="form-control" required="required" placeholder="Nombre">
                             </div>
                             <div class="form-group col-sm-6 email-field">
-                                <input type="email" id="conemail" name="email" class="form-control" required="required" placeholder="Email Id">
+                                <input type="email" id="conemail" name="email" class="form-control" required="required" placeholder="Email">
                             </div>
                             <div class="form-group col-sm-12">
-                                <textarea name="message" id="conmessage" id="message" required="required" class="form-control" rows="8" placeholder="Your Text"></textarea>
+                                <textarea name="message" id="conmessage" id="message" required="required" class="form-control" rows="8" placeholder="Su Mensaje"></textarea>
                             </div> 
                         </div>				                                   
                         <div class="form-group">
-                            <button type="submit" id="consubmit" class="btn btn-default">Submit</button>
+                            <button type="submit" id="consubmit" class="btn btn-default">Enviar</button>
                         </div>
                     </form>				
             </div>';
