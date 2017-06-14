@@ -20,7 +20,7 @@
     else{
       $posts=array();
     }
-
+    var_dump($posts);
     $service_return = '';
 
     $service_return .= '<div class="container"><div class="row">';
