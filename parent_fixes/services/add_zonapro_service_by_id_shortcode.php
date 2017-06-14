@@ -20,10 +20,10 @@
 
     $service_return .= '<div class="container"><div class="row">';
     
-    $posts=($ids=='')?array():explode(', '$ids);
-
-
     
+
+
+
     $q = new WP_Query(
       array('post_type' => array('service'),
         'post_status' => array('publish'),
@@ -60,8 +60,8 @@
     endwhile;
     $service_return.= '</div>';
     wp_reset_query();
-    $service_return .= '</div>';
-    $service_return .=var_dump($posts);
+    $service_return .= "$ids</div>";
+
     return $service_return;
   }
 

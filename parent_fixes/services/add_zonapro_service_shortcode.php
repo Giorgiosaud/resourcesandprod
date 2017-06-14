@@ -14,8 +14,12 @@
       'sitem' => '',
       'ids'=>'',
       ), $atts, 'wishlist')); 
-
-    $posts=($ids!='')?explode(', ',$ids):array();
+    if($ids!=''){
+      $posts=explode(', ',$ids);
+    }
+    else{
+      $posts=array();
+    }
 
     $service_return = '';
 
