@@ -40,7 +40,9 @@ line-height: 55px;
 font-size:20px;
 line-height:0px;
 }
-
+#navigation .navbar-right li a{
+	font-size:12px;
+}
 @media (max-width: 767px){
 	a.navbar-brand{
 		height: 80px;
