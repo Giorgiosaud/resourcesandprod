@@ -44,7 +44,7 @@ function contactdetails_child2($atts)
     if($address!='')
         $contact_address_return .= "<p><i class='fa fa-map-marker'></i>$address</p>";
     if($phone!='')
-        $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tel'>Telefono: $phone </a></p>";
+        $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tel'> $phone </a></p>";
     if($email!='')
         $contact_address_return .= "<p><i class='fa fa-envelope'></i><a href='mailto:$email'> $email</a></p>";
     $contact_address_return .= '</address>';
