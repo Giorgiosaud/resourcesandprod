@@ -2,24 +2,25 @@
   add_action('init', 'based_on_doors_service_shortcode');
 
   function based_on_doors_service_shortcode() {
-    add_shortcode( 'zonapro-service', 'service_shortcode_child' );
+    add_shortcode( 'zonapro-service-by-id', 'service_by_id_shortcode_child' );
   }
 
 
 
-  function service_shortcode_child($atts) {
+  function service_by_id_shortcode_child($atts) {
     extract(shortcode_atts(array(
       'category' => '',
       'type' => '',
       'sitem' => '',
-      'ids'=>'',
-      ), $atts, 'wishlist')); 
+      'ids'=>''
+      ), $atts, 'wishlist'));
 
-    $posts=($ids!='')?explode(', ',$ids):array();
 
     $service_return = '';
 
     $service_return .= '<div class="container"><div class="row">';
+    
+    $posts=($ids=='')?array():explode(', '$ids);
 
 
 

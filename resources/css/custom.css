@@ -31,6 +31,15 @@
 	height: 100%;
     width: auto;
 }
+.carousel-caption h2{
+font-size:60px;
+line-height: 55px;
+
+}
+.carousel-caption.container{
+font-size:20px;
+line-height:0px;
+}
 @media (max-width: 767px){
 	a.navbar-brand{
 		height: 80px;

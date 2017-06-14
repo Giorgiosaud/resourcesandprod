@@ -16,12 +16,3 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: resourcesprod
 
 */
-.carousel-caption h2{
-font-size:60px;
-line-height: 55px;
-
-}
-.carousel-caption.container{
-font-size:20px;
-line-height:0px;
-}
