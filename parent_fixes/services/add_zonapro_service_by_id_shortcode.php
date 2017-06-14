@@ -23,7 +23,7 @@
     $posts=($ids=='')?array():explode(', '$ids);
 
 
-    var_dump($posts);
+    
     $q = new WP_Query(
       array('post_type' => array('service'),
         'post_status' => array('publish'),
@@ -61,7 +61,7 @@
     $service_return.= '</div>';
     wp_reset_query();
     $service_return .= '</div>';
-
+    $service_return .=var_dump($posts);
     return $service_return;
   }
 
