@@ -13,19 +13,18 @@ function contactdetails_child($atts)
 
     $contact_address_return .= '<h2>'.$title.'</h2>';
     $contact_address_return .= '<address>';
-    if($address!=''){
+    if($address!='')
         $contact_address_return .= "<p><i class='fa fa-map-marker'></i> Address: $address</p>";
-    }
-    if($phone!=''){
+    if($phone!='')
         $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tel'>Telefono: $phone </a></p>";
-    }
-    $contact_address_return .= "<p><i class='fa fa-envelope'></i> Email: $email</p>";
+    if($email!='')
+        $contact_address_return .= "<p><i class='fa fa-envelope'></i> Email: <a href='mailto:$email'> $email</a></p>";
     $contact_address_return .= '</address>';
     $contact_address_return .= '</div>';
 
     return $contact_address_return;
 }
-add_shortcode( "tw-contactdetails", "contactdetails" );
+add_shortcode( "zp-contactdetails", "contactdetails" );
 
 
 function contactdetails_child2($atts)
@@ -46,7 +45,7 @@ function contactdetails_child2($atts)
     if($phone!='')
         $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tel'>Telefono: $phone </a></p>";
     if($email!='')
-    $contact_address_return .= "<p><i class='fa fa-envelope'></i> Email: <a href='mailto:$email'> $email</a></p>";
+        $contact_address_return .= "<p><i class='fa fa-envelope'></i> Email: <a href='mailto:$email'> $email</a></p>";
     $contact_address_return .= '</address>';
     $contact_address_return .= '</div>';
 
