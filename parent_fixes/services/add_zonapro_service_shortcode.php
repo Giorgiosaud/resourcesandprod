@@ -17,7 +17,7 @@ function service_shortcode_child($atts) {
   
   $posts=($ids!='')?explode(', ',$ids):array();
   
-  var_dump($posts);
+  // var_dump($posts);
   $service_return = '';
 
   $service_return .= '<div class="container"><div class="row">';
