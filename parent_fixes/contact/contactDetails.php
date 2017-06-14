@@ -52,4 +52,4 @@ function contactdetails_child2($atts)
 
     return $contact_address_return;
 }
-add_shortcode( "zp-contactdetails2", "contactdetails_child2" );
+add_shortcode( "zp-contactdetails", "contactdetails_child2" );
