@@ -36,6 +36,7 @@ function contactdetails_child2($atts)
         'email'         => '',
 
         ), $atts));
+    $tel = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
     
     $contact_address_return = '<div class="col-sm-6 wow zoomIn contactdetails" data-wow-duration="700ms" data-wow-delay="300ms">';
     $contact_address_return .= "<h2>$title</h2>";
