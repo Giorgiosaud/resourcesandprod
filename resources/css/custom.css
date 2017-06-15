@@ -65,7 +65,7 @@ border-radius: 20px;
 	.on-mobile{
 		display:block;
 	}
-	.on-pc{
+	.main-nav .img-responsive.logo-top.on-pc{
 		display: none;
 	}
 	.navbar-brand h1{
