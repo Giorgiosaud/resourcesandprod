@@ -65,7 +65,7 @@ img.img-responsive.logo-top.on-mobile{
 	img.img-responsive.logo-top.on-mobile{
 		display:block;
 	}
-	.main-nav .img-responsive.logo-top.on-pc{
+	.main-nav .img-responsive.logo-top.on-pc,img.img-responsive.logo-fixed.on-pc{
 		display: none;
 	}
 	.navbar-brand h1{
