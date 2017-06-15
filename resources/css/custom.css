@@ -62,7 +62,7 @@ img.img-responsive.logo-top.on-mobile{
 		padding: 15px 15px 0 15px;
 		width: auto;
 	}
-	.on-mobile{
+	img.img-responsive.logo-top.on-mobile{
 		display:block;
 	}
 	.main-nav .img-responsive.logo-top.on-pc{
