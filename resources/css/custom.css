@@ -52,13 +52,22 @@ border-radius: 20px;
 #navigation .navbar-right li a{
 	font-size:12px;
 }
+.on-mobile{
+		display:none;
+	}
+
 @media (max-width: 767px){
 	a.navbar-brand{
 		height: 80px;
 		padding: 15px 15px 0 15px;
 		width: auto;
 	}
-	
+	.on-mobile{
+		display:block;
+	}
+	.on-pc{
+		display: none;
+	}
 	.navbar-brand h1{
 		margin-left: 0;
 	}

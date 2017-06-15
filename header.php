@@ -77,8 +77,9 @@
                                 $logo = get_option('logo_url', FALSE);
                                 $logotext = get_option('logo_text', FALSE);
                                 $optionsChild=get_option('child_theme');
-                                $topImage=wp_get_attachment_image($optionsChild['imagen_top_id'],'full',false,array('class'=>'img-responsive logo-top'));
+                                $topImage=wp_get_attachment_image($optionsChild['imagen_top_id'],'full',false,array('class'=>'img-responsive logo-top on-pc'));
                                 $scrollImage=wp_get_attachment_image($optionsChild['imagen_on_scroll_id'],'full',false,array('class'=>'img-responsive logo-fixed'));
+                                $topImageMini=wp_get_attachment_image($optionsChild['imagen_on_scroll_id'],'full',false,array('class'=>'img-responsive logo-top on-mobile'));
                                 if ($topImage == '') {
                                     $topImage = $logotex;
                                 }
@@ -101,6 +102,8 @@
                                            
                                         <?= $topImage ?>
                                         <?= $scrollImage ?>
+                                        <?= $topImageMini ?>
+                    
                                     <!-- <img class="img-responsive" src="<?php echo $lo; ?>" alt="<?php bloginfo('name'); ?>"> -->
                                     </h1>
                                     <h2><?php echo $lt; ?></h2>
