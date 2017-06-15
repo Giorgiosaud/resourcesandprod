@@ -52,7 +52,7 @@ border-radius: 20px;
 #navigation .navbar-right li a{
 	font-size:12px;
 }
-.on-mobile{
+.main-nav .img-responsive.logo-top.on-mobile{
 		display:none;
 	}
 
