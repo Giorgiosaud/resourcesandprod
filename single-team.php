@@ -17,11 +17,12 @@ get_header(); ?>
                     // Start the Loop.
                     while ( have_posts() ) : the_post();
                         get_template_part( 'content', 'team' );
-                        // if(get_option('commentswithc', false) != 'commentOff'):
+                        if(get_option('commentswithc', false) != 'commentOff'):
                         if ( comments_open() || get_comments_number() ) 
                         {
                             comments_template();
                         }
+                        endif;
                     endwhile;
                 ?>
             </div><!-- #content -->

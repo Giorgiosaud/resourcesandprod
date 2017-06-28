@@ -30,13 +30,7 @@
     <div class="entry-post">
         <?php the_content(); ?>
     </div>
-    <div class="social-share">
-        <?php
-        if (shortcode_exists('social_share')) {
-            echo do_shortcode('[social_share/]');
-        }
-        ?>
-    </div><!--/social-share-->
+    
     <?php
     $aboutauthorstatus = get_option('aboutauthorstatus', FALSE);
     if ($aboutauthorstatus == 'show'):
