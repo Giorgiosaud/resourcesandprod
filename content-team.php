@@ -14,16 +14,7 @@
     <div class="entry-header">
         <p></p>
 
-        <?php
-        if (has_post_thumbnail()) {
-            ?>
-            <p class="datea"><?php the_title(); ?>
-            <!-- <span><?php the_time('j') ?></span> <?php the_time('F') ?> -->
-            </p>
-            <?php
-            //echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-responsive'));
-        }
-        ?>
+        
         <h3><?php the_title(); ?></h3>
         <div class="entry-meta">
             <?php the_tags('<span> <i class="fa fa-tag"></i> ', '<i class="fa fa-tag"></i> ', '</span>'); ?>
