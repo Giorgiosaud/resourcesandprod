@@ -21,7 +21,7 @@
             <!-- <span><?php the_time('j') ?></span> <?php the_time('F') ?> -->
             </p>
             <?php
-            echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-responsive'));
+            //echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-responsive'));
         }
         ?>
         <h3><?php the_title(); ?></h3>
