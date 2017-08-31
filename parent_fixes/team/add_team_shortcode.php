@@ -48,7 +48,7 @@
                     $team_return .= '<div class="item active"><div class="row">';
                 }
 
-                $team_return .= '<div class="col-sm-6">
+                $team_return .= '<div class="col-sm-push-1 col-sm-5">
                                 <div class="team-member">
                                     <div class="member-image">
                                         ' . $thumgSmall . '
