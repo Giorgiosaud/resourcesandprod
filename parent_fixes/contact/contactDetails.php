@@ -24,7 +24,7 @@ function contactdetails_child($atts)
 
     return $contact_address_return;
 }
-add_shortcode( "zp-contactdetails", "contactdetails" );
+add_shortcode( "zp-contactdetails", "contactdetails_child" );
 
 
 function contactdetails_child2($atts)
