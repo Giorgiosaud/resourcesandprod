@@ -49,12 +49,12 @@ function contactdetails_child2($atts)
         $contact_address_return .= "<p><i class='fa fa-map-marker'></i>$address</p>";
     if(sizeof($phones)>1){
         foreach ($phones as $key => $telephone) {
-            $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tels[$key]'> $telephone </a></p>";
+            $contact_address_return .= "<p><i class='fa fa-phone'></i> <a href='tel:$tels[$key]' target='_blank'> $telephone </a></p>";
         }
     }
     if(sizeof($emails)>1){
         foreach ($emails as $email) {
-            $contact_address_return .= "<p><i class='fa fa-envelope'></i><a href='mailto:$email'> $email</a></p>";
+            $contact_address_return .= "<p><i class='fa fa-envelope'></i><a href='mailto:$email' target='_blank'> $email</a></p>";
         }
     }
     $contact_address_return .= '</address>';
