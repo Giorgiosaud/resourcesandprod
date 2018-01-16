@@ -19,18 +19,18 @@ Text Domain: resourcesprod
 section#partners {
     background: #d7efff;
 }
-div.wpcf7-mail-sent-ok{
-    color:green:
-    text-align: right;
-    border:none;
-}
-div.wpcf7-validation-errors{
-    color:yellow;
-    text-align: right;
-    border:none;
-}
-div.wpcf7-spam-blocked{
-    border:none;
-    coloe:#ffa500;
-    text-align: right;
-}
+/*div.wpcf7-mail-sent-ok{*/
+    /*color:green:*/
+    /*text-align: right;*/
+    /*border:none;*/
+/*}*/
+/*div.wpcf7-validation-errors{*/
+    /*color:yellow;*/
+    /*text-align: right;*/
+    /*border:none;*/
+/*}*/
+/*div.wpcf7-spam-blocked{*/
+    /*border:none;*/
+    /*coloe:#ffa500;*/
+    /*text-align: right;*/
+/*}*/
