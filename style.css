@@ -19,6 +19,9 @@ Text Domain: resourcesprod
 section#partners {
     background: #d7efff;
 }
+.wpcf7-form-control.form-control.wpcf7-not-valid {
+    border-color: red;
+}
 /*div.wpcf7-mail-sent-ok{*/
     /*color:green:*/
     /*text-align: right;*/
