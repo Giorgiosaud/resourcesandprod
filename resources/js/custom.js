@@ -1,15 +1,15 @@
 jQuery(document).ready(function($){
     /* Validation Events for changing response CSS classes */
     document.addEventListener( 'wpcf7invalid', function( event ) {
-        $('.wpcf7-response-output').addClass('alert alert-danger');
+        $('.wpcf7-response-output').removeClass('alert-warning alert-danger alert-success').addClass('alert alert-danger');
     }, false );
     document.addEventListener( 'wpcf7spam', function( event ) {
-        $('.wpcf7-response-output').addClass('alert alert-warning');
+        $('.wpcf7-response-output').removeClass('alert-warning alert-danger alert-success').addClass('alert alert-warning');
     }, false );
     document.addEventListener( 'wpcf7mailfailed', function( event ) {
-        $('.wpcf7-response-output').addClass('alert alert-warning');
+        $('.wpcf7-response-output').removeClass('alert-warning alert-danger alert-success').addClass('alert alert-warning');
     }, false );
     document.addEventListener( 'wpcf7mailsent', function( event ) {
-        $('.wpcf7-response-output').addClass('alert alert-success');
+        $('.wpcf7-response-output').removeClass('alert-warning alert-danger alert-success').addClass('alert alert-success');
     }, false );
 });
