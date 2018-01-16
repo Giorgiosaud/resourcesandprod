@@ -30,7 +30,8 @@ function my_theme_enqueue_styles()
       );
     wp_dequeue_script('google-api');
     wp_enqueue_script('google-api', 'https://maps.google.com/maps/api/js?key=AIzaSyBjxvF9oTfcziZWw--3phPVx1ztAsyhXL4', array('pretty-photo'), '', TRUE);
-    
+    wp_register_script('childScripts',CHILD_THEME_URI.'/resources/js/custom.js',['jquery']);
+    wp_enqueue_script('childScripts');
     wp_enqueue_style('ChildCustomizations');
 
   }
