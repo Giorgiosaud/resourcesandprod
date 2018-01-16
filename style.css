@@ -29,3 +29,8 @@ div.wpcf7-validation-errors{
     text-align: right;
     border:none;
 }
+div.wpcf7-spam-blocked{
+    border:none;
+    coloe:#ffa500;
+    text-align: right;
+}
